@@ -27,8 +27,7 @@ public class AccountController  extends JsonController{
 	@RequestMapping(value="/GetUser",produces="text/html;charset=UTF-8")
 	@ResponseBody
 	public String getUserInfo() throws Exception
-	{
-		System.out.println("ю╢ак");
+	{ 
 		List<UserInfo> userInfo = new UserService().getUserInfo(1); 
 		return JsonSuccess(userInfo,null) ;
 	}
