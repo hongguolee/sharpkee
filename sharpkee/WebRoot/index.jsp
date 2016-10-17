@@ -21,7 +21,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 
 <body>
-	首页-更改了
+	<hr />
+	<h3>首页-更改了，在myeclipse 中更改的 （版本1）</h3>
 	<br>
 </body>
 </html>
