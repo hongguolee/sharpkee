@@ -1,5 +1,8 @@
 package com.sharpkee.service;
 
+import java.io.IOException;
+import java.util.List;
+
 import com.sharpkee.dao.UserDao;
 import com.sharpkee.model.data.UserInfo;
 
@@ -13,8 +16,9 @@ public class UserService {
 	 * 
 	 * @param id
 	 * @return
+	 * @throws IOException 
 	 */
-	public UserInfo getUserInfo(int id) {
+	public List<UserInfo> getUserInfo(int id) throws IOException {
 		return new UserDao().getUserInfo(id);
 	}
 }
