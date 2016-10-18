@@ -18,17 +18,17 @@ public class AccountController  extends JsonController{
 		//return "Account/index";
 	}
 	
-	@RequestMapping(value="/AddUser",produces="text/html;charset=UTF-8")
+	@RequestMapping(value="/AddUser",produces="application/json;charset=UTF-8")
 	@ResponseBody
 	public String addUser() throws Exception
 	{
 		return JsonSuccess("Œ“∑µªÿ¡À", ""); 
 	}
-	@RequestMapping(value="/GetUser",produces="text/html;charset=UTF-8")
+	@RequestMapping(value="/GetUser",produces="application/json;charset=UTF-8")
 	@ResponseBody
 	public String getUserInfo() throws Exception
 	{ 
-		List<UserInfo> userInfo = new UserService().getUserInfo(1); 
+		List<UserInfo> userInfo = new UserService().getUserInfo(1);   
 		return JsonSuccess(userInfo,null) ;
 	}
 }

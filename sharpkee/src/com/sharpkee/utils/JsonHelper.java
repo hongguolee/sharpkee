@@ -1,5 +1,7 @@
 package com.sharpkee.utils;
 
+import java.text.SimpleDateFormat;
+
 import org.codehaus.jackson.map.ObjectMapper;
 
 /**
@@ -10,6 +12,15 @@ import org.codehaus.jackson.map.ObjectMapper;
 public class JsonHelper {
 
 	private static ObjectMapper objectMapper = new ObjectMapper();
+	
+	/**
+	 * 设置日期格式
+	 */
+	static
+	{
+		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+		objectMapper.setDateFormat(fmt); 
+	}
 
 	/**
 	 * 把object转换为json字符串
@@ -19,7 +30,7 @@ public class JsonHelper {
 	 * @throws Exception
 	 */
 	public static String objectToJson(Object obj) throws Exception {
-		return objectMapper.writeValueAsString(obj);
+		return objectMapper.writeValueAsString(obj); 
 	}
 
 	/**
